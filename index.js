@@ -16,7 +16,8 @@ MongoClient.connect(uri, {useUnifiedTopology: true}, (err, client)=>{
 app.post('/addSuperHeros'), (req,res) => {
     db.collection('SuperHeros').insertOne({
         name:"",
-        content:""
+        content:"",
+        id:""
     }), (err,result)=>{
         if(err) throw err;
         res.send(result)
